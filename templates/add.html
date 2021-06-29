@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div class="container-fluid shadow text-center align-items-center p-5 add_container">
+  <form action="{{ url_for('add') }}" method="post">
+    {{ form.csrf_token }}
+      <h2 class="mt-5 mb-5">Enter Task Here</h2>
+        {{ form.title(class="form-control") }}
+        {{ form.submit(class="btn btn-lg btn-success mt-5") }}
+  </form>
+</div>
+{% endblock %}
